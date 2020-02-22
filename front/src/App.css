@@ -1,38 +1,228 @@
-.App {
+body {
+  background-color: #001818;
+  color: #fff;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #ffffff10;
+  height: 15rem;
+  display: flex;
+  width: 100%;
+  border-bottom: white 3px solid;
+}
+
+.headerText {
+  margin: auto;
+  font-size: 4rem;
+  padding-top: 2rem;
+}
+.game {
+  margin: auto;
+  max-width: 70rem;
+  padding: 1rem;
+  background-color: #00000080;
+}
+
+.innerContent {
+  background-color: #00000060;
+  min-height: calc(100vh - 15rem - 3px);
+}
+
+th {
+  margin: 0.1rem;
+  text-align: left;
+}
+
+.game table {
+  width: 100%;
+  font-size: larger;
+}
+.drinkputWpr {
+  width: 100%;
+  display: flex;
+  height: 5rem;
+}
+.drinkput {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
+.poista {
+  cursor: pointer;
+  color: red;
+  text-align: center;
+  margin: 0.05rem;
+  border: 2px black solid;
+  border-radius: 0.2rem;
+  background-color: #ddd;
+  font-weight: 900;
+}
+.poista:hover {
+  background-color: #fff;
+}
+.sendScore {
+  display: flex;
+  margin-top: 2rem;
+}
+.confirmScore {
+  border: 4px solid black;
+  border-radius: 0.5rem;
+  background-color: rgb(17, 83, 72);
+  padding: auto;
+  width: 20%;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 2rem;
+}
+.confirmScore:hover {
+  background-color: rgb(37, 184, 159);
+}
+.teamInput {
+  font-size: 2rem;
+  text-align: center;
+  width: auto;
+  flex-grow: 1;
+}
+.disabled {
+  background-color: darkgray !important;
+  color: lightgray;
+}
+.TopCounter {
+  display: flex;
+  padding: 3rem;
+}
+.counter {
+  width: 25%;
+  margin: auto;
+  background-color: #222;
+  box-shadow: 5px 10px 18px #000;
+  padding: 3%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter-flash {
+  background-color: #222;
+  animation: flash 5s ease-out 0 1 forwards;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes flash {
+  0% {
+    background-color: white;
+  }
+  ,
+  100% {
+    background-color: #222;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.counterOtsikko {
+  display: block;
+  font-size: 1.5rem;
+}
+.counterCounter {
+  display: block;
+  font-size: 2rem;
+}
+
+.hostMain {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 3rem;
+}
+.hostMainCell {
+  width: 25%;
+  margin: auto;
+  max-height: 25rem;
+  margin-top: 2rem;
+  display: block;
+  padding: 1rem;
+  background-color: #333;
+  box-shadow: 5px 10px 18px #000;
+}
+.hostTable {
+  width: 100%;
+}
+.hostRow {
+}
+.hostCell {
+}
+.hostHeader {
+  border-bottom: solid white 2px;
+}
+.lastTable {
+  width: 100%;
+}
+.lastResult {
+  text-align: center;
+}
+.lastName {
+  text-align: center;
+}
+.lastLabel {
+  font-size: 1rem;
+}
+.lastVal {
+  font-size: 1.2rem;
+}
+.bganim {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  animation: backanim 60s linear infinite 0s;
+  opacity: 0;
+}
+.bganim1 {
+  background: url('./kuvat/isku-10.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation-delay: 0s;
+}
+.bganim2 {
+  background: url('./kuvat/isku-16.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation-delay: 20s;
+}
+.bganim3 {
+  background: url('./kuvat/isku-19.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation-delay: 40s;
+}
+@keyframes backanim {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerLogo {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
 }
